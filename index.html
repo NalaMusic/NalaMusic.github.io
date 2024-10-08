@@ -4658,16 +4658,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  var system ={};
-  var p = navigator.platform;
-  system.win = p.indexOf("Win") == 0;
-  system.mac = p.indexOf("Mac") == 0;
-  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
   let imgs = {};
-  if(system.win||system.mac||system.x11){
-	imgs = ["images/captainbenefits.png"];
-  }else{
+  if(navigator.userAgent.match(/Mobile/i)) {
 	imgs = ["images/nala.jpg"];
+  } else {
+	imgs = ["images/captainbenefits.png"];
   }
   let index = 0;
   let IntervalParallax = null;
