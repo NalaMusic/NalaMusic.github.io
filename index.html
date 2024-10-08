@@ -4663,10 +4663,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   system.win = p.indexOf("Win") == 0;
   system.mac = p.indexOf("Mac") == 0;
   system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+  let imgs = ["images/captainbenefits.png"];
   if(system.win||system.mac||system.x11){
-	let imgs = ["images/captainbenefits.png"];
+	imgs = ["images/captainbenefits.png"];
   }else{
-	let imgs = ["images/nala.jpg"];
+	imgs = ["images/nala.jpg"];
   }
   let index = 0;
   let IntervalParallax = null;
